@@ -50,7 +50,7 @@
 .Card-information p{
   font-family:'Times New Roman', Times, serif;
   font-size: 100%;
-  padding: 8%;
+  padding: 4%;
 }
 p{
   margin: 0% !important;
