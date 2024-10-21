@@ -101,14 +101,6 @@ export default {
         },
         {
           images: [
-            "https://images.ecestaticos.com/HusK4xNt2WmNiLo7tQ8p5Z-u7ag=/0x0:2000x1332/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F157%2F730%2Fc84%2F157730c84ea1578f120c75c3f997989a.jpg",
-            "https://fotografias.correryfitness.com/clipping/cmsimages02/2016/08/01/4DC29812-B537-4839-8AF1-69E7F86C2058/69.jpg",
-            "https://media-cdn.tripadvisor.com/media/photo-s/0d/dc/83/2f/meson-del-cuchicute.jpg?w=1200&h=-1&s=1",
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/dc/83/2f/meson-del-cuchicute.jpg?w=1200&h=-1&s=1",
-          ],
-        },
-        {
-          images: [
             "https://cdn.kiwicollection.com/media/property/PR003646/xl/003646-01-dining-room-city-view-sunset.jpg?cb=1413919376",
           ],
         },
