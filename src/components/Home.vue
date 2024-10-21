@@ -7,6 +7,7 @@
         <iframe
          width="90%"
          height="48%"
+         margin-bottom = "4%"
          src="https://www.youtube.com/embed/eDa2rdFmOiY?autoplay=1&loop=1&playlist=eDa2rdFmOiY&mute=1"
          title="YouTube video player"
          frameborder="0"
