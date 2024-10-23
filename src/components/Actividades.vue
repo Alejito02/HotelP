@@ -72,6 +72,7 @@
   grid-template-columns: 50% 50%;
   margin-left: 5%;
   margin-top: 2%;
+  transition: 0.5s;
 }
 
 .Card2{
@@ -87,6 +88,7 @@
   grid-template-columns: 50% 50%;
   margin-left: 5%;
   margin-top: 2%;
+  transition: 0.5s;
 }
 
 .Card3{
@@ -102,18 +104,22 @@
   grid-template-columns: 50% 50%;
   margin-left: 5%;
   margin-top: 2%;
-}
-
-.img{
   transition: 0.5s;
-  opacity: 0.8;
 }
 
 
 .textCA{
   font-family: "Manrope", sans-serif;
 }
-.img:hover{
+.Card1:hover{
+  transform: scale(1.3);
+}
+
+.Card2:hover{
+  transform: scale(1.3);
+}
+
+.Card3:hover{
   transform: scale(1.3);
 }
 
