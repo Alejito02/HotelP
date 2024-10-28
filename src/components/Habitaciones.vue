@@ -1,131 +1,151 @@
 <template>
-    <div class="containerHB">
-      <div class="CardM">
-        <div class="HabIn">
-         <img src="https://www.hotelmedici.com/images/stories/camere/singola_1200/singola_1_1200.jpg" class="imgIn" height="90%" width="100%">
-         <p class="text">Habitación Individual Perfecta para viajeros de negocios o aquellos que desean relajarse en un ambiente íntimo.</p>
-        </div>
-        <div class="HabDE">
-         <img src="https://images.mirai.com/INFOROOMS/100121951/39rbIWlTZaauLh81PHWd/39rbIWlTZaauLh81PHWd_original.jpg" class="imgDE" height="90%" width="100%">
-         <p class="text">Habitación Doble Estándar, nuestra habitación doble estándar cuenta con una cómoda cama doble y un ambiente relajante. Disfruta de conexión Wi-Fi gratuita.</p>
-        </div>
-        <div class="HabDD">
-         <img src="https://www.amsterdamforesthotel.com/images/rooms/deluxe-twin/gallery/deluxe-twin-room-amsterdam-forest-hotel-3.jpg" class="imgDD" height="100%" width="100%">
-         <p class="text">Habitación Doble Deluxe Experimenta el lujo y el confort en nuestra Habitación Doble Deluxe. Con una amplia cama doble, elegante diseño y detalles exclusivos para una estancia inolvidable. y vistas privilegiadas que te invitan a relajarte y disfrutar.</p>
-        </div>
-        <div class="Est">
-         <img src="https://www.hoteloroeljaca.com/wp-content/uploads/habitacion-studio-similares.jpg" class="imgEst" height="90%" width="100%">
-         <p class="text">Habitación Estudio Disfruta de la independencia y el confort en nuestra Habitación Estudio. Con un diseño moderno y funcional, cuenta con una cama cómoda, área de trabajo y kitchenette totalmente equipada.</p>
-        </div>
-        <div class="SuiJ">
-         <img src="https://www.zaanhotel.com/images/rooms/junior-suite/gallery/Junior%20Suite%208.jpg" class="imgJ" height="90%" width="100%">
-         <p class="text">Suite Júnior Vive una experiencia de lujo en nuestra Suite Júnior.  una cama doble de gran confort y una zona de estar separada, es ideal para quienes buscan un toque extra de comodidad.</p>
-        </div>
-        <div class="SuiP">
-         <img src="https://s3.amazonaws.com/static-webstudio-accorhotels-usa-1.wp-ha.fastbooking.com/wp-content/uploads/sites/19/2022/03/11175445/DUF_7063-v-ok-1170x780.jpg" class="imgP" height="100%" width="100%">
-         <p class="text">Suite Presidencial Sumérgete en el máximo lujo y exclusividad en nuestra Suite Presidencial. Con un diseño sofisticado y amplios espacios, ofrece una elegante habitación principal. Equipada con todas las comodidades de alta gama.</p>
+  <div class="containerHB">
+    <div class="CardM">
+      <div v-for="(room, index) in rooms" :key="index" class="room-card">
+        <div class="room-image-container">
+          <img :src="room.image" class="room-img" />
+          <div class="room-description">
+            <p>{{ room.description }}</p>
+          </div>
         </div>
       </div>
-      <router-view />
     </div>
+  </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      rooms: [
+        {
+          image: "https://www.hotelmedici.com/images/stories/camere/singola_1200/singola_1_1200.jpg",
+          description: "Habitación Individual. Perfecta para viajeros de negocios. 40$ por noche"
+        },
+        {
+          image: "https://images.mirai.com/INFOROOMS/100121951/39rbIWlTZaauLh81PHWd/39rbIWlTZaauLh81PHWd_original.jpg",
+          description: "Habitación Doble Estándar. Cama doble y ambiente relajante. 50$ por noche"
+        },
+        {
+          image: "https://www.amsterdamforesthotel.com/images/rooms/deluxe-twin/gallery/deluxe-twin-room-amsterdam-forest-hotel-3.jpg",
+          description: "Habitación Doble Deluxe. Experimenta el lujo y el confort. 60$ por noche"
+        },
+        {
+          image: "https://www.hoteloroeljaca.com/wp-content/uploads/habitacion-studio-similares.jpg",
+          description: "Habitación Estudio. Disfruta de la independencia. 70$ por noche"
+        },
+        {
+          image: "https://www.zaanhotel.com/images/rooms/junior-suite/gallery/Junior%20Suite%208.jpg",
+          description: "Suite Júnior. Vive una experiencia de lujo. 75$ por noche"
+        },
+        {
+          image: "https://www.windsortower.com/wp-content/uploads/2015/04/1-1.jpg",
+          description: "Habitación Ejecutiva, Amplia y elegante, ideal para viajeros de negocios. $150 por noche."
+        },
+        {
+          image: "https://hotelgrandpark.com.co/wp-content/uploads/2024/06/Familiar_02.jpg",
+          description: "Suite Familiar, Espacio cómodo para familias, con un dormitorio principal. $200 por noche."
+        },
+        {
+          image: "https://www.windsortower.com/wp-content/uploads/2015/04/2-SUPERIOR.jpg",
+          description: "Habitación Superior, Con vistas panorámicas, decorada con gusto y equipada con comodidades. $250 por noche."
+        },
+        {
+          image: "https://images.homify.com/v1441997275/p/photo/image/899911/15._Habitaci%C3%B3n_2.jpg",
+          description: "Habitación con Balcón, Habitación luminosa con un balcón privado para disfrutar del aire libre. $250 por noche."
+        },
+        {
+          image: "https://st3.idealista.com/news/archivos/styles/fullwidth_xl/public/2015-10/piratas.jpg?VersionId=HECY.nYwM8NFJCHqHv9J2fOiSMUlyp7J&itok=F3s-aLyv",
+          description: "Habitación Temática, Diseñada con un estilo único y decoraciones creativas. $250 por noche."
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style>
-.containerHB{
+.containerHB {
   height: 100vh;
-  background-image:linear-gradient(rgba(36, 36, 36, 0.8), rgba(61, 61, 61, 0.808)), url(https://live.staticflickr.com/7688/17849982309_690149079b_b.jpg);
+  background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(61, 61, 61, 0.808)), url(https://live.staticflickr.com/7688/17849982309_690149079b_b.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 20px;
 }
-.CardM{
+
+.CardM {
   background-color: rgba(90, 201, 235, 0.527);
   border-radius: 10px;
-  width: 70%;
-  height: 100vh;
+  width: 90%;
+  max-height: 90vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  line-height: 2;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 5px;
   display: grid;
-  grid-template-columns:30% 30% 30%;
-  grid-template-rows: 50% 50% ;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.room-card {
+  background-color: rgb(86, 141, 158);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
+  transition: transform 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: flex;
   justify-content: center;
-
-}
-.HabIn{
-    background-color: rgb(86, 141, 158);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
-    margin: 9px;
-    transition: 0.5s;
-    display: grid;
-    grid-auto-rows: 60% 40%;
-}
-.HabDE{
-    background-color: rgb(86, 141, 158);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
-    margin: 9px;
-    transition: 0.5s;
-    display: grid;
-    grid-auto-rows: 60% 40%;    
-}
-.HabDD{
-    background-color: rgb(86, 141, 158);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
-    margin: 9px;
-    transition: 0.5s;  
-    display: grid;
-    grid-auto-rows: 50% 50%;
-}
-.Est{
-    background-color: rgb(86, 141, 158);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
-    margin: 9px;
-    transition: 0.5s;
-    display: grid;
-    grid-auto-rows: 60% 40%;
-}
-.SuiJ{
-    background-color: rgb(86, 141, 158);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
-    margin: 9px;
-    transition: 0.5s;
-    display: grid;
-    grid-auto-rows: 60% 40%;
-}
-.SuiP{
-    background-color: rgb(86, 141, 158);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
-    margin: 9px;
-    transition: 0.5s;
-    display: grid;
-    grid-auto-rows: 50% 50%;
-}
-.HabIn:hover{
-    transform: scale(1.1);
-}
-.HabDE:hover{
-    transform: scale(1.1);
-}
-.HabDD:hover{
-    transform: scale(1.1);
-}
-.Est:hover{
-    transform: scale(1.1);
-}
-.SuiJ:hover{
-    transform: scale(1.1);
-}
-.SuiP:hover{
-    transform: scale(1.1);
+  align-items: center;
 }
 
-.text{
-    font-size: 87%;
-    color: rgb(230, 255, 241);
+.room-card:hover {
+  transform: scale(1.05);
+}
+
+.room-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.room-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.room-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.room-card:hover .room-description {
+  opacity: 1;
+}
+
+.room-description p {
+  color: rgb(230, 255, 241);
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
 }
 </style>
-
