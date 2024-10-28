@@ -81,7 +81,7 @@ export default {
   border-radius: 10px;
   width: 90%;
   max-height: 90vh;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(82, 226, 236, 0.671);
   text-align: center;
   color: #ffffff;
   display: grid;
@@ -94,7 +94,7 @@ export default {
 .room-card {
   background-color: rgb(86, 141, 158);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.781);
+  box-shadow: 0 4px 8px rgba(87, 201, 195, 0.781);
   transition: transform 0.3s;
   cursor: pointer;
   overflow: hidden;
@@ -128,7 +128,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(51, 155, 173, 0.651);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +142,7 @@ export default {
 }
 
 .room-description p {
-  color: rgb(230, 255, 241);
+  color: rgb(255, 255, 255);
   font-size: 16px;
   text-align: center;
   margin: 0;
